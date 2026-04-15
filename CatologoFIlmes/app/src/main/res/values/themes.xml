@@ -1,0 +1,6 @@
+<resources>
+    <style name="Base.Theme.CatologoFIlmes" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+
+    <style name="Theme.CatologoFIlmes" parent="Base.Theme.CatologoFIlmes" />
+</resources>

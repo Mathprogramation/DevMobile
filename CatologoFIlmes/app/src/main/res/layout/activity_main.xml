@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText android:id="@+id/etTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Título do Filme" />
+
+    <EditText android:id="@+id/etDiretor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Diretor" />
+
+    <EditText android:id="@+id/etAno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ano de Lançamento"
+        android:inputType="number" />
+
+    <RatingBar android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"
+        android:rating="3" />
+
+    <Spinner android:id="@+id/spinnerGenero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox android:id="@+id/checkCinema"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vi no cinema" />
+
+    <Button android:id="@+id/btnSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner android:id="@+id/spinnerFiltro"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <CheckBox android:id="@+id/checkFiltroCinema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cinema" />
+
+        <Spinner android:id="@+id/spinnerOrdem"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ListView android:id="@+id/listViewFilmes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
