@@ -49,7 +49,7 @@ public class DespesaAdapter extends BaseAdapter {
 
         tvDescricao.setText(d.getDescricao());
         tvInfo.setText(d.getFormaPagamento() + " • " + d.getData()
-                + (d.isFoiPaga() ? " $" : ""));
+                + (d.isFoiPaga() ? " $" +d.getValor() : ""));
 
         return convertView;
     }

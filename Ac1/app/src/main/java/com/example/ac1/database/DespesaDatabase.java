@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.net.wifi.rtt.RangingRequest;
 
 import com.example.ac1.models.Despesa;
 
@@ -19,7 +18,7 @@ public class DespesaDatabase extends SQLiteOpenHelper {
     // Nomes da tabela e colunas
     public static final String TABELA = "despesas";
     public static final String COL_ID      = "id";
-    public static final String COL_Descricao  = "descrição";
+    public static final String COL_Descricao = "descricao";
     public static final String COL_Categoria = "categoria";
     public static final String COL_Valor    = "valor";
     public static final String COL_Data    = "data";
@@ -126,7 +125,7 @@ public class DespesaDatabase extends SQLiteOpenHelper {
                 c.getInt(c.getColumnIndexOrThrow(COL_ID)),
                 c.getString(c.getColumnIndexOrThrow(COL_Descricao)),
                 c.getString(c.getColumnIndexOrThrow(COL_Categoria)),
-                c.getInt(c.getColumnIndexOrThrow(COL_Valor)),
+                c.getDouble(c.getColumnIndexOrThrow(COL_Valor)),
                 c.getString(c.getColumnIndexOrThrow(COL_Data)),
                 c.getString(c.getColumnIndexOrThrow(COL_Forma)),
                 c.getInt(c.getColumnIndexOrThrow(COL_Status)) == 1

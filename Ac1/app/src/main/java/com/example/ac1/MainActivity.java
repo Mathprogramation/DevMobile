@@ -93,6 +93,9 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_dropdown_item, DESPESA_CATEGORIA));
 
         spinnerFiltro.setAdapter(new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_dropdown_item, DESPESA_CATEGORIA));
+
+        spinnerFormaPagamento.setAdapter(new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_dropdown_item, FORMA_PAGAMENTO));
 
         spinnerOrdem.setAdapter(new ArrayAdapter<>(this,
@@ -116,18 +119,18 @@ public class MainActivity extends AppCompatActivity {
             }
 
             String categoria = spinnerCategoria.getSelectedItem().toString();
-            Float valor  = Float.parseFloat(etValor.getText().toString());
+            Double valor  = Double.parseDouble(etValor.getText().toString());
             String data        = etData.getText().toString().trim();
             String pagamento  = spinnerFormaPagamento.getSelectedItem().toString();
             boolean foiPago = checkFoiPago.isChecked();
 
             if (idEditando == -1) {
                 // NOVO
-                db.inserir(new Despesa(descricao, categoria, 0, data, pagamento, foiPago));
+                db.inserir(new Despesa(descricao, categoria, valor, data, pagamento, foiPago));
                 Toast.makeText(this, "Despesa salvo!", Toast.LENGTH_SHORT).show();
             } else {
                 // EDIÇÃO
-                db.atualizar(new Despesa(idEditando, descricao, categoria, 0, data, pagamento, foiPago));
+                db.atualizar(new Despesa(idEditando, descricao, categoria, valor, data, pagamento, foiPago));
                 Toast.makeText(this, "Despesa atualizada!", Toast.LENGTH_SHORT).show();
                 idEditando = -1;
                 btnSalvar.setText("Salvar");
@@ -190,6 +193,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void atualizarLista() {
         String categoriaFiltro = spinnerFiltro.getSelectedItem().toString();
+        if ("Todos".equals(categoriaFiltro)) categoriaFiltro = null;
         boolean pago      = checkFiltroPago.isChecked();
         String ordemStr     = spinnerOrdem.getSelectedItem().toString();
 

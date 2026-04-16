@@ -1,16 +1,17 @@
 package com.example.ac1.models;
 
+
 public class Despesa {
 
 private int id;
 private String descricao;
 private String categoria;
-private float valor;
+private Double valor;
 private String data;
 private String formaPagamento;
 private boolean foiPaga;
 
-public Despesa(int id, String descricao, String categoria, float valor, String data , String formaPagamento, boolean foiPaga){
+public Despesa(int id, String descricao, String categoria, Double  valor, String data , String formaPagamento, boolean foiPaga){
     this.id = id;
     this.descricao = descricao;
     this.categoria=categoria;
@@ -20,7 +21,7 @@ public Despesa(int id, String descricao, String categoria, float valor, String d
     this.foiPaga = foiPaga;
 }
 
-public Despesa(String descricao, String categoria, float valor, String data , String formaPagamento, boolean foiPaga){
+public Despesa(String descricao, String categoria, Double valor, String data , String formaPagamento, boolean foiPaga){
     this(-1, descricao, categoria, valor, data, formaPagamento, foiPaga);
 }
 
@@ -72,11 +73,11 @@ public Despesa(String descricao, String categoria, float valor, String data , St
         this.data = data;
     }
 
-    public float getValor() {
+    public Double getValor() {
         return valor;
     }
 
-    public void setValor(float valor) {
+    public void setValor(Double valor) {
         this.valor = valor;
     }
 }
