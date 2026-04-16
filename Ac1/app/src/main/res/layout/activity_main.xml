@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+<EditText android:id="@+id/etDescricao"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Descrição da despesa" />
+
+    <Spinner
+        android:id="@+id/spinnerCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText android:id="@+id/etValor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Valor da Despesa"
+    android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Informe a data" />
+
+    <Spinner
+        android:id="@+id/spinnerFormaPagamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+<CheckBox android:id="@+id/checkFoiPago"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Foi Pago?" />
+
+<Button android:id="@+id/btnSalvar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Salvar" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Spinner android:id="@+id/spinnerFiltro"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+    <CheckBox android:id="@+id/checkFiltroPago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foi pago? " />
+
+    <Spinner android:id="@+id/spinnerOrdem"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+
+<ListView android:id="@+id/listViewDespesas"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1" />
+
+</LinearLayout>
