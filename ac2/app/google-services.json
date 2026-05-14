@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "272602416966",
+    "project_id": "ac2zinha",
+    "storage_bucket": "ac2zinha.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272602416966:android:a5d05e13e96e45c8c90747",
+        "android_client_info": {
+          "package_name": "com.example.ac2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ8r8EmE1BwtpKF-DsrwtSzR_CdwXODaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
